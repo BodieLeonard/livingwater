@@ -8,7 +8,7 @@ How to setup your environment with gulp dependencies
 	# Install Virtualbox
 	Virtualbox.com/wiki/Linux_Downloads
 	copy command below on web page
-	`$ sudo add-apt-repository -y “deb http://download.virtualbox.com/virtualbox/debian `trusty contrib"
+	`$ sudo add-apt-repository -y “deb http://download.virtualbox.com/virtualbox/debian trusty contrib"`
 	Verify with fingerprint
 	`$ gpg —with-fingerprint oracle_vbox.asc`
 	Go back to Linux_Downloads and copy the key fingerprint is:
