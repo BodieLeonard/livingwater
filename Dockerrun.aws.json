@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "681360461555.dkr.ecr.us-east-1.amazonaws.com/livingwater",
+    "Name": "john99jacobs/livingwater",
     "Update": "true"
   },
   "Ports": [
