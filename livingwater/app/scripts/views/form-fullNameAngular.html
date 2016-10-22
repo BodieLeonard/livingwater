@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="../../../dist/css/main.css" />
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  </head>
+  <body ng-app="Donation" ng-cloak>
+
+
+  <div ng-controller="donationController" layout="column" ng-cloak="" class="inputdemoErrors" ng-app="myApp">
+
+  <md-content layout-padding="">
+    <form name="fullNameForm" class="form-signin" role="form" ng-submit="fullName()">>
+
+      <md-input-container class="md-block">
+        <label>First Name</label>
+        <input required="" md-no-asterisk="" name="firstName" ng-model="donation.firstName">
+        <div ng-messages="fullNameForm.firstName.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container>
+        <label>Last Name</label>
+        <input required="" name="lastName" ng-model="donation.lastName">
+        <div ng-messages="fullNameForm.lastName.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <div>
+        <button nclass="btn btn-lg btn-primary btn-block" type="submit">
+            <b>Nice to meet you, click here for next step</b>
+        </button>
+      </div>
+    </form>
+  </md-content>
+</div>
+</body>
+
+
+
