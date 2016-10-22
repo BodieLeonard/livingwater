@@ -9,6 +9,7 @@ apt-get -y install zlib1g-dev
 apt-get -y install libssl-dev 
 apt-get -y install libreadline6-dev 
 apt-get -y install libyaml-dev
+apt-get -y install git
 
 cd /tmp
 wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.gz
@@ -49,6 +50,7 @@ npm install -g opn
 npm install -g vinyl-fs 
 npm install -g serve-static
 npm install -g browser-sync
+
 
 
 rm -rf /var/www
