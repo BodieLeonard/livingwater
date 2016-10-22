@@ -7,15 +7,16 @@
 <body ng-controller='WelcomeCtrl'>
 
 	<nav id="menu">
-		<li class="row" ng-repeat="item in menuItems">
-			<p> {{item}} </p>			
-		</li>
+		<ul class="menu-section-list">
+			<li class="row" ng-repeat="item in menuItems">
+				<p> {{item}} </p>			
+			</li>
+		</ul>
 	</nav>
 
 	<main id="panel">
 		<header>
-			<button class="toggle-button">Menu</button>
-			<h2>Panel</h2>
+			<button class="toggle-button">Menu</button>			
 		</header>
 	</main>
 
