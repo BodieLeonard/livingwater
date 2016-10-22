@@ -36,6 +36,12 @@ cd into the living water repo
 # If you wish to run browser sync open a new terminal tab and make sure you are in the same directory as bs-config.js
 * `$ browser-sync start`
 
+# Create .bashrc file to automatically load directory on ssh
+* `$ touch .bashrc`
+# `$ nano .bashrc`
+# `cd /vagrant/livingwater/`
+# ctrl x
+
 # URLs
 # Main IP
 http://192.222.22.22

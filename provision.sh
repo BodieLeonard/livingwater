@@ -54,6 +54,12 @@ npm install -g browser-sync
 rm -rf /var/www
 ln -s /vagrant/livingwater/dist /var/www
 
+
+touch .bashrc
+# nano .bashrc
+# cd /vagrant/livingwater/
+# ctrl x
+
 service apache2 start
 
 
