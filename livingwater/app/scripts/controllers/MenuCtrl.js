@@ -26,8 +26,4 @@ var MenuCtrl = function($scope) {
 		slideout.toggle();
 	});
 
-	document.querySelector('.menu').addEventListener('click', function(eve) {
-	  if (eve.target.nodeName === 'A') { slideout.close(); }
-	});
-
 module.exports = MenuCtrl;
