@@ -11,6 +11,13 @@ apt-get -y install libreadline6-dev
 apt-get -y install libyaml-dev
 apt-get -y install git
 
+apt-get install apt-transport-https ca-certificates
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+apt-get update
+apt-get install docker-engine
+service docker start
+
 cd /tmp
 wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.gz
 tar -xvzf ruby-2.0.0-p481.tar.gz
