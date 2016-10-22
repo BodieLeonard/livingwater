@@ -93,6 +93,12 @@ span.form-option-span {
   color: #1A4359;
   font-weight: 300; }
 
+.option a {
+  color: whitesmoke; }
+
+.option a:hover {
+  color: #FEC31D; }
+
 body {
   background: #D3D3D3;
   color: #434343; }

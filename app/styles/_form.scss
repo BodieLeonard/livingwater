@@ -6,6 +6,7 @@ $text-color: whitesmoke;
 $input-border-color: #1A4359;
 $input-placeholder-color: #1A4359;
 $form-button-bg-color: #3CA2D9;
+$a-tag-hover-color: #FEC31D;
 
 html{ 
   background: url(../images/form-bg.png) no-repeat center center fixed; 
@@ -123,5 +124,13 @@ span.form-option-span {
 	margin-right: 3vw;
 	color: $form-placeholder-color;
 	font-weight: 300;
+}
+
+.option a{
+	color: $text-color;
+}
+
+.option a:hover{
+	color: $a-tag-hover-color;
 }
 
