@@ -3,8 +3,15 @@
 <head>
   <title>My awesome app</title>
   <link rel="stylesheet" href="css/main.css" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="cleartype" content="on">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
-<body ng-controller='WelcomeCtrl'>
+<body ng-controller='MenuCtrl'>
 
 	<nav id="menu" class="menu">
 		<ul class="menu-section-list">
@@ -20,7 +27,8 @@
 			<button class="toggle-button">Menu</button>			
 		</header>
 	</main>
-	<script src="/slideout.min.js"></script>
+
+	<script src="/js/slideout.min.js"></script>
 	<script src="/js/bundle.js"></script>
 	<script id="__bs_script__">document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.5'><\/script>".replace("HOST", location.hostname));</script>
 	<script>document.write('<script src="192.000.00.00:35729/livereload.js?snipver=1"></' + 'script>')</script>

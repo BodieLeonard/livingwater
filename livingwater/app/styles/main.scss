@@ -1,23 +1,19 @@
 html,
-body {
-  
-  margin: 0 auto;  
-  -webkit-text-size-adjust: none;
-  -webkit-font-smoothing: antialiased;
-}
 
 body,
 .panel {
   background-color: #fff;
 }
 
-.menu {
-  background-image: linear-gradient(180deg, #1A4359, #3CA2D9);
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: #4B5;
-  text-decoration: none;
+.menu {
+  background-image: linear-gradient(180deg, #1A4359, #3CA2D9);
 }
 
 .panel {
@@ -27,20 +23,17 @@ a {
 }
 
 .row-text {
-	padding: 10px;
+
+	font: 160%/0.5em 'Muli', Muli, Arial, sans-serif;
+	font-weight: 100;	
+	color: #FFF;
+	padding-left: 10px;
 }
 
 .menu-section-list {
-	font: 150%/0.50em 'Muli', sans-serif;
-	color: #FFF;
-  padding: 0;
-  
-  list-style:none;
-}
 
-.menu-section-list a {
-  display: block;
-  padding: 10px 20px;
+	padding: 0;	
+  	list-style:none;
 }
 
 .slideout-menu {

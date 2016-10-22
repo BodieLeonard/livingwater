@@ -2,10 +2,11 @@
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict";
 
-var WelcomeCtrl = function($scope) {
-  $scope.testVar = 'We running from a required module!';
-  $scope.menuItems = menuItems;
+var MenuCtrl = function($scope) {
+	$scope.menuItems = menuItems;
 };
+
+module.exports = MenuCtrl;
 
 var menuItems = 
 	[
@@ -16,8 +17,6 @@ var menuItems =
 		"About Living Water", 
 		"Store"
 	];
-
-module.exports = WelcomeCtrl;
 	
 	var slideout = new Slideout({
 	    'panel': document.getElementById('panel'),
@@ -30,21 +29,32 @@ module.exports = WelcomeCtrl;
 	  document.querySelector('.toggle-button').addEventListener('click', function() {
 	    slideout.toggle();
   	});
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/controllers/MenuCtrl","/controllers")
+},{"buffer":6,"oMfpAn":9}],2:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+"use strict";
+
+var WelcomeCtrl = function($scope) {
+  $scope.testVar = 'We running from a required module!';
+};
+
+module.exports = WelcomeCtrl;
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/controllers/WelcomeCtrl.js","/controllers")
-},{"buffer":5,"oMfpAn":8}],2:[function(require,module,exports){
+},{"buffer":6,"oMfpAn":9}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
 var angular = require('angular'); // That's right! We can just require angular as if we were in node
 
 var WelcomeCtrl = require('./controllers/WelcomeCtrl'); // We can use our WelcomeCtrl.js as a module. Rainbows.
-
+var MenuCtrl = require('./controllers/MenuCtrl');
 var app = angular.module('myApp', []);
 
 app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
+app.controller('MenuCtrl', ['$scope', MenuCtrl]);
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_3ff2e043.js","/")
-},{"./controllers/WelcomeCtrl":1,"angular":4,"buffer":5,"oMfpAn":8}],3:[function(require,module,exports){
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_be800b7f.js","/")
+},{"./controllers/MenuCtrl":1,"./controllers/WelcomeCtrl":2,"angular":5,"buffer":6,"oMfpAn":9}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * @license AngularJS v1.2.32
@@ -22244,13 +22254,13 @@ var styleDirective = valueFn({
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/angular/angular.js","/../../node_modules/angular")
-},{"buffer":5,"oMfpAn":8}],4:[function(require,module,exports){
+},{"buffer":6,"oMfpAn":9}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 require('./angular');
 module.exports = angular;
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/angular/index.js","/../../node_modules/angular")
-},{"./angular":3,"buffer":5,"oMfpAn":8}],5:[function(require,module,exports){
+},{"./angular":4,"buffer":6,"oMfpAn":9}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -23363,7 +23373,7 @@ function assert (test, message) {
 }
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/index.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer")
-},{"base64-js":6,"buffer":5,"ieee754":7,"oMfpAn":8}],6:[function(require,module,exports){
+},{"base64-js":7,"buffer":6,"ieee754":8,"oMfpAn":9}],7:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -23491,7 +23501,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib")
-},{"buffer":5,"oMfpAn":8}],7:[function(require,module,exports){
+},{"buffer":6,"oMfpAn":9}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -23579,7 +23589,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754")
-},{"buffer":5,"oMfpAn":8}],8:[function(require,module,exports){
+},{"buffer":6,"oMfpAn":9}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -23646,4 +23656,4 @@ process.chdir = function (dir) {
 };
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/process/browser.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/process")
-},{"buffer":5,"oMfpAn":8}]},{},[2])
+},{"buffer":6,"oMfpAn":9}]},{},[3])
