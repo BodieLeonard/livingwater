@@ -51,3 +51,42 @@ http://192.222.22.22:35729
 
 # Browser sync requires you to run browser sync
 http://192.222.22.22:5000
+
+# Deploy Mobile App
+### Dependencies
+* Android Studio
+* Cordova (See installing Cordova)
+* Node 4.x+
+* Xcode 8+
+
+###Installing Cordova
+In order to build the mobile application you will need to install cordova
+globally via npm.
+```bash
+$ npm install -g cordova
+```
+
+###Project Setup
+In order to create the platforms directory, use the following command to
+prepare the environment:
+```bash
+$ cordova prepare
+```
+This command will generate the require cordova project files as defined 
+below:
+
+* platforms/ios
+* platforms/android
+* hooks/
+* plugins/
+
+###Building the app
+To prepare you application binaries, use the following command:
+```bash
+cordova build
+```
+
+this should generate the binaries in the following directories:
+* platforms/ios/build/emulator
+* 
+
