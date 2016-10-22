@@ -14,7 +14,7 @@ input {
 input:focus {
   outline: none; }
 
-#inputFirstName, #inputLastName {
+.input-div > input {
   font-size: 3.5vh;
   margin-bottom: 3.5vh;
   margin-top: 3.5vh; }
@@ -62,6 +62,36 @@ input:focus {
 
 span.header-highlighted {
   color: #FEC31D; }
+
+/*note on the phone view*/
+.form-note {
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 3vh; }
+
+.option {
+  text-align: center; }
+
+span.form-option-span {
+  font-size: 5vh;
+  margin: 4vh; }
+
+.option {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.option > div {
+  color: whitesmoke; }
+
+.option div:first-child {
+  font-size: 3em;
+  margin-right: 3vw;
+  color: #1A4359;
+  font-weight: 300; }
 
 body {
   background: #D3D3D3;

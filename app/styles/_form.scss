@@ -1,6 +1,8 @@
 $header-span-color: #FEC31D;
 $form-placeholder-color: #1A4359;
 $form-footer-color: whitesmoke;
+$form-note-color: whitesmoke;
+$text-color: whitesmoke;
 $input-border-color: #1A4359;
 $input-placeholder-color: #1A4359;
 $form-button-bg-color: #3CA2D9;
@@ -28,7 +30,7 @@ input:focus{
 	outline: none;
 }
 
-#inputFirstName, #inputLastName{
+.input-div > input{
 	font-size: 3.5vh;
     margin-bottom: 3.5vh;
     margin-top: 3.5vh;
@@ -90,4 +92,36 @@ span.header-highlighted{
 	color: $header-span-color;
 }
 
+/*note on the phone view*/
+.form-note{
+	text-align: center;
+	color: $form-note-color;
+	margin-bottom: 3vh;
+}
+
+.option {
+    text-align: center;
+}
+
+span.form-option-span {
+    font-size: 5vh;
+    margin: 4vh;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option > div{
+	color: $text-color;
+}
+
+.option div:first-child{
+	font-size: 3em;
+	margin-right: 3vw;
+	color: $form-placeholder-color;
+	font-weight: 300;
+}
 
