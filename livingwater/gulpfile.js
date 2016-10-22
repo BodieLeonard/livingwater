@@ -71,6 +71,11 @@ gulp.task('browserify', function() {
   .pipe(gulp.dest('dist/js'));
 });
 
+  gulp.task('images', function(){
+    gulp.src(['app/images/*.*'])
+    .pipe(gulp.dest('dist/images'));
+  })
+
 // Views task
 gulp.task('views', function() {
   // Get our index.html

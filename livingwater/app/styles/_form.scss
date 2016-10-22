@@ -1,0 +1,57 @@
+$header-span-color: #FEC31D;
+$form-placeholder-color: #1A4359;
+$form-footer-color: whitesmoke;
+$input-border-color: #1A4359;
+$input-placeholder-color: #1A4359;
+$form-button-bg-color: #3CA2D9;
+html{ 
+  background: url(../images/form-bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#form-body{
+	background: transparent;
+	margin: auto;
+    width: 60%;
+}
+
+input{
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid $input-border-color;
+    }
+
+::-webkit-input-placeholder { /* Chrome */
+  color: $input-placeholder-color;
+  font-size: 1.5em;
+  padding-left: .5em;
+}
+
+.form-header{
+	text-align: center;
+}
+
+.footer-msg, .footer-contact{
+    width: 70%;
+    margin: auto;
+    color: $form-footer-color;
+}
+
+#form-button {
+    background-color: $form-button-bg-color;
+    border-color: $form-button-bg-color;
+}
+
+.donation-form{
+	background: transparent;
+}
+
+span.header-highlighted{
+	color: $header-span-color;
+}
+
+

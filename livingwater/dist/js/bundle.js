@@ -33194,5 +33194,5 @@ var app = angular.module('myApp', []);
 
 app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
 
-}).call(this,require("yrKqVT"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_971b086f.js","/")
+}).call(this,require("yrKqVT"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_5b900673.js","/")
 },{"./controllers/WelcomeCtrl":7,"angular":2,"buffer":4,"yrKqVT":6}]},{},[8])

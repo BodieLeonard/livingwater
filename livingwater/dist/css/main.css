@@ -1,3 +1,41 @@
+html {
+  background: url(../images/form-bg.png) no-repeat center center fixed;
+  background-size: cover; }
+
+#form-body {
+  background: transparent;
+  margin: auto;
+  width: 60%; }
+
+input {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #1A4359; }
+
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #1A4359;
+  font-size: 1.5em;
+  padding-left: .5em; }
+
+.form-header {
+  text-align: center; }
+
+.footer-msg, .footer-contact {
+  width: 70%;
+  margin: auto;
+  color: whitesmoke; }
+
+#form-button {
+  background-color: #3CA2D9;
+  border-color: #3CA2D9; }
+
+.donation-form {
+  background: transparent; }
+
+span.header-highlighted {
+  color: #FEC31D; }
+
 body {
   background: #D3D3D3;
   color: #434343; }
