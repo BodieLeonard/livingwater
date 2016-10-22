@@ -3,18 +3,10 @@
 <head>
   <title>My awesome app</title>
   <link rel="stylesheet" href="css/main.css" />
-  <meta http-equiv="cleartype" content="on">
-	<meta name="MobileOptimized" content="320">
-	<meta name="HandheldFriendly" content="True">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body ng-controller='WelcomeCtrl'>
 
 	<nav id="menu">
-		<header>
-			<h2>Menu</h2>
-		</header>
 		<li class="row" ng-repeat="item in menuItems">
 			<p> {{item}} </p>			
 		</li>
@@ -27,7 +19,7 @@
 		</header>
 	</main>
 
-	<h1>Living Water Hello!@#</h1>
+	<h1>Living Water Hello</h1>
 
 	<p>{{testVar}}</p>
 	<script src="/slideout.min.js"></script>

@@ -3,24 +3,33 @@
 "use strict";
 
 var WelcomeCtrl = function($scope) {
-  $scope.testVar = 'We running from a required module! ';
-
-  $scope.menuItems = ["Thirst Gauge", "Why Water?", "Why Us?", "Take Action", "About Living Water", "Store"];
+  $scope.testVar = 'We running from a required module!';
+  $scope.menuItems = menuItems;
 };
 
+var menuItems = 
+	[
+		"Thirst Gauge",
+		"Why Water?", 
+		"Why Us?", 
+		"Take Action", 
+		"About Living Water", 
+		"Store"
+	];
+
 module.exports = WelcomeCtrl;
+	
+	var slideout = new Slideout({
+	    'panel': document.getElementById('panel'),
+	    'menu': document.getElementById('menu'),
+	    'padding': 256,
+	    'tolerance': 70
+	  });
 
-var slideout = new Slideout({
-    'panel': document.getElementById('panel'),
-    'menu': document.getElementById('menu'),
-    'padding': 256,
-    'tolerance': 70
-  });
-
-  // Toggle button
-  document.querySelector('.toggle-button').addEventListener('click', function() {
-    slideout.toggle();
-  });
+	  // Toggle button
+	  document.querySelector('.toggle-button').addEventListener('click', function() {
+	    slideout.toggle();
+  	});
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/controllers/WelcomeCtrl.js","/controllers")
 },{"buffer":5,"oMfpAn":8}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
@@ -34,7 +43,7 @@ var app = angular.module('myApp', []);
 
 app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_1eada64d.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_3ff2e043.js","/")
 },{"./controllers/WelcomeCtrl":1,"angular":4,"buffer":5,"oMfpAn":8}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
