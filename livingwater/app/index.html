@@ -3,15 +3,36 @@
 <head>
   <title>My awesome app</title>
   <link rel="stylesheet" href="css/main.css" />
+  <meta http-equiv="cleartype" content="on">
+	<meta name="MobileOptimized" content="320">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body ng-controller='WelcomeCtrl'>
 
-  <h1>Living Water </h1>
+	<nav id="menu">
+		<header>
+			<h2>Menu</h2>
+		</header>
+		<li class="row" ng-repeat="item in menuItems">
+			<p> {{item}} </p>			
+		</li>
+	</nav>
 
-  <p>{{testVar}}</p>
+	<main id="panel">
+		<header>
+			<button class="toggle-button">Menu</button>
+			<h2>Panel</h2>
+		</header>
+	</main>
 
-  <script src="/js/bundle.js"></script>
-  <script id="__bs_script__">document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.5'><\/script>".replace("HOST", location.hostname));</script>
-  <script>document.write('<script src="192.000.00.00:35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<h1>Living Water Hello!@#</h1>
+
+	<p>{{testVar}}</p>
+	<script src="/slideout.min.js"></script>
+	<script src="/js/bundle.js"></script>
+	<script id="__bs_script__">document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.5'><\/script>".replace("HOST", location.hostname));</script>
+	<script>document.write('<script src="192.000.00.00:35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

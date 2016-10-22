@@ -1,0 +1,20 @@
+{
+  "name": "livingwater",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/nurbsurf/livingwater",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slideout.js": "https://github.com/mango/slideout.git#^0.1.12"
+  },
+  "devDependencies": {
+    "slideout.js": "https://github.com/mango/slideout.git#^0.1.12"
+  }
+}
