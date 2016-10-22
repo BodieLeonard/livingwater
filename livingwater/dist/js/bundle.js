@@ -6,9 +6,7 @@ var MenuCtrl = function($scope) {
 	$scope.menuItems = menuItems;
 };
 
-module.exports = MenuCtrl;
-
-var menuItems = 
+	var menuItems = 
 	[
 		"Thirst Gauge",
 		"Why Water?", 
@@ -17,19 +15,25 @@ var menuItems =
 		"About Living Water", 
 		"Store"
 	];
-	
-	var slideout = new Slideout({
-	    'panel': document.getElementById('panel'),
-	    'menu': document.getElementById('menu'),
-	    'padding': 256,
-	    'tolerance': 70
-	  });
 
-	  // Toggle button
-	  document.querySelector('.toggle-button').addEventListener('click', function() {
-	    slideout.toggle();
-  	});
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/controllers/MenuCtrl","/controllers")
+	var slideout = new Slideout({
+		'panel': document.getElementById('panel'),
+		'menu': document.getElementById('menu'),
+		'padding': 256,
+		'tolerance': 70
+	});
+
+	// Toggle button
+	document.querySelector('.toggle-button').addEventListener('click', function() {
+		slideout.toggle();
+	});
+
+	document.querySelector('.menu').addEventListener('click', function(eve) {
+	  if (eve.target.nodeName === 'A') { slideout.close(); }
+	});
+
+module.exports = MenuCtrl;
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/controllers/MenuCtrl.js","/controllers")
 },{"buffer":6,"oMfpAn":9}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict";
@@ -53,7 +57,7 @@ var app = angular.module('myApp', []);
 app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
 app.controller('MenuCtrl', ['$scope', MenuCtrl]);
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_be800b7f.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_14f0c4ce.js","/")
 },{"./controllers/MenuCtrl":1,"./controllers/WelcomeCtrl":2,"angular":5,"buffer":6,"oMfpAn":9}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
