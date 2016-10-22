@@ -38,10 +38,10 @@ cd into the living water repo
 
 # URLs
 # Main IP
-http://192.222.22.22/
+http://192.222.22.22
 
 # Live Reload requires you to run gulp
-* `$ http://192.222.22.22:5000/`
+http://192.222.22.22:35729
 
 # Browser sync requires you to run browser sync
-* `$ http://192.222.22.22:5000/`
+http://192.222.22.22:5000
