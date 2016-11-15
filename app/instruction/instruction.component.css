@@ -1,0 +1,28 @@
+:host{
+  display:block;
+  margin-top:63px;
+  display:block;
+}
+.instruction {
+  position:relative;
+
+}
+
+.instruction h4{
+  font-weight:700;
+  color:#ffffff;
+  text-align: left;
+  font-size: 250%;
+  font-weight: 300;
+  margin-left:15px;
+  margin-top:0;
+}
+
+.instruction strong{
+  font-weight:700;
+  color:#FEC31D;
+}
+
+.instruction .slide-heading-marker{
+  top:5px;
+}

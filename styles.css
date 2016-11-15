@@ -1,5 +1,6 @@
 /* Master Styles */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import url('/node_modules/font-awesome/css/font-awesome.min.css');
 
 body, html{
   margin:0;
@@ -8,6 +9,7 @@ body, html{
   font-family: 'Lato', sans-serif;
   font-weight:300;
   min-height: 100%;
+
 }
 h1 {
   color: white;
@@ -24,13 +26,14 @@ h3.slide-heading-intro {
   text-align: left;
   line-height: 90%;
   padding:20px;
+  margin:0;
 }
 .slide-heading-marker {
   width: 4px;
   height: 39px;
   background: #D70005;
   position: absolute;
-  top: 76px;
+  top: 26px;
   left: 0px;
 }
 
@@ -38,16 +41,13 @@ body, input[text], button {
   font-weight:400;
 }
 body{
-  background-image:url('/images/livingwater_bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .color-bg{
   height:100%;
   width:100%;
-  z-index: -1;
+  z-index: 0;
   top:0;
   position: fixed;
 }
@@ -60,6 +60,24 @@ body{
   background-image: -moz-linear-gradient(top,  rgba(25,66,88,0.9) 0%, rgba(60,162,217,1) 100%);
   background-image: -webkit-linear-gradient(top,  rgba(25,66,88,0.9) 0%,rgba(60,162,217,1) 100%);
   background-image: linear-gradient(to bottom,  rgba(25,66,88,0.9) 0%,rgba(60,162,217,1) 100%);
+}
+.color-bg.black{
+  background-image: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,1) 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%);
+  background-image: radial-gradient(ellipse at bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%);
+}
+.main-bg{
+  background-image:url('/images/livingwater_bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: fixed;
+  top:0;
+  z-index:-1;
+  height:100%;
+  width:100%;
+  background-attachment: fixed;
 }
 
 strong, b{
@@ -188,7 +206,7 @@ nav a.router-link-active {
 }
 
 .loading{
-  font-size: 400%;
+  font-size: 350%;
   text-transform: uppercase;
   letter-spacing: -.05em;
   line-height: .9em;
@@ -196,10 +214,12 @@ nav a.router-link-active {
   text-align: center;
   margin:0 auto;
   margin-top:100px;
+  color:black;
+  font-weight:300;
 }
 
-.button {
-  color:white;
+.button, a.button:visited {
+  color:#ffffff;
   padding: 10px;
   font-size: 120%;
   background: #3CA2D9;
@@ -208,7 +228,31 @@ nav a.router-link-active {
   display: block;
   border-style: solid;
   border-width: 1px;
+  margin:0 20px;
 }
+
+a.blue {
+  color:#3CA2D9;
+  text-decoration: none;
+}
+.mb {
+  margin-bottom:10px;
+}
+
+section.section-slim{
+  position:relative;
+  max-width:320px;
+  display:block;
+  margin:0 auto;
+  z-index: 2;
+}
+section{
+  position:relative;
+  display:block;
+  z-index: 2;
+}
+
+
 
 /* everywhere else */
 * { 

@@ -1,0 +1,45 @@
+:host {
+  text-align: left;
+  display: block;
+  position: relative;
+  bottom: 0px;
+}
+i{
+  float: left;
+  font-size: 150%;
+  position: relative;
+  top: 6px;
+  margin-right: 10px;
+  margin-left:20px;
+}
+h1{
+  margin:0;
+  padding:0;
+  text-transform:uppercase;
+  font-size:140%;
+  float:left;
+}
+.right {
+  float:right;
+  width:100px;
+}
+
+p{
+  margin:0;
+  padding:0;
+}
+.count{
+  color: #FEC31D;
+  float: left;
+  font-size: 300%;
+  margin-right:5px;
+  top: -12px;
+  position: relative;
+}
+
+.measurement {
+  text-transform:uppercase;
+  color:#BBB9BB;
+  font-size: 140%;
+}
+

@@ -1,5 +1,5 @@
 :host{
-  position:relative;
+
 }
 .intro-header{
   background:white;
@@ -19,14 +19,14 @@ h1{
 }
 h2{
   position: relative;
-  font-size: 450%;
+  font-size: 400%;
   text-transform: uppercase;
   word-wrap: break-word;
   letter-spacing: -.05em;
   line-height: .9em;
   margin: 0;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .triangle {
   border-top: 90px solid white;
@@ -37,12 +37,12 @@ h2{
 }
 .living-water-logo {
   background-image: url(/images/living-water-logo.png);
-  width: 80px;
-  height: 133px;
+  width: 60px;
+  height: 99px;
   background-size: contain;
   margin: 0 auto;
   background-repeat: no-repeat;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
 }
 
