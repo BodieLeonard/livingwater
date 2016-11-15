@@ -1,0 +1,216 @@
+/* Master Styles */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+body, html{
+  margin:0;
+  padding:0;
+  color:white;
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  min-height: 100%;
+}
+h1 {
+  color: white;
+  font-weight:300;
+  font-size: 250%;
+  margin:0;
+}
+h2, h3 {
+  font-weight:300;
+}
+
+h3.slide-heading-intro {
+  font-size: 320%;
+  text-align: left;
+  line-height: 90%;
+  padding:20px;
+}
+.slide-heading-marker {
+  width: 4px;
+  height: 39px;
+  background: #D70005;
+  position: absolute;
+  top: 76px;
+  left: 0px;
+}
+
+body, input[text], button {
+  font-weight:400;
+}
+body{
+  background-image:url('/images/livingwater_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.color-bg{
+  height:100%;
+  width:100%;
+  z-index: -1;
+  top:0;
+  position: fixed;
+}
+.color-bg.yellow{
+  background-image: -moz-radial-gradient(center, ellipse cover,  rgba(255,227,62,.9) 0%, rgba(254,195,29,1) 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover,  rgba(255,227,62,.9) 0%,rgba(254,195,29,1) 100%);
+  background-image: radial-gradient(ellipse at bottom,  rgba(255,227,62,.9) 0%,rgba(254,195,29,1) 100%);
+}
+.color-bg.blue{
+  background-image: -moz-linear-gradient(top,  rgba(25,66,88,0.9) 0%, rgba(60,162,217,1) 100%);
+  background-image: -webkit-linear-gradient(top,  rgba(25,66,88,0.9) 0%,rgba(60,162,217,1) 100%);
+  background-image: linear-gradient(to bottom,  rgba(25,66,88,0.9) 0%,rgba(60,162,217,1) 100%);
+}
+
+strong, b{
+  font-weight: 400;
+}
+
+a {
+  cursor: pointer;
+  cursor: hand;
+  text-decoration: none;
+}
+button {
+
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.router-link-active {
+  color: #039be5;
+}
+
+/* items class */
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+
+.items li.selected:hover {
+  background-color: #BBD8DC;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.loading{
+  font-size: 400%;
+  text-transform: uppercase;
+  letter-spacing: -.05em;
+  line-height: .9em;
+  width:360px;
+  text-align: center;
+  margin:0 auto;
+  margin-top:100px;
+}
+
+.button {
+  color:white;
+  padding: 10px;
+  font-size: 120%;
+  background: #3CA2D9;
+  border-radius: 5px;
+  border-color: #3187B5;
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* everywhere else */
+* { 
+
+}

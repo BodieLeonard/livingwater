@@ -1,0 +1,55 @@
+:host{
+  position:relative;
+}
+.intro-header{
+  background:white;
+}
+
+h1{
+  color: black;
+  margin: -20px;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 0;
+  font-size: 180%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+h2{
+  position: relative;
+  font-size: 450%;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  letter-spacing: -.05em;
+  line-height: .9em;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.triangle {
+  border-top: 90px solid white;
+  border-left: 320px solid transparent;
+  position: relative;
+  right: 0px;
+  top: 20px;
+}
+.living-water-logo {
+  background-image: url(/images/living-water-logo.png);
+  width: 80px;
+  height: 133px;
+  background-size: contain;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+
+}
+
+.slide-heading-marker {
+  position: absolute;
+  top: 20px;
+  left: -1px;
+  height: 45px;
+  z-index: 20;
+}

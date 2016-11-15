@@ -1,92 +1,145 @@
-#Setup
-How to setup your environment with gulp dependencies
+# Angular QuickStart Source
+[![Build Status][travis-badge]][travis-badge-url]
 
-# Install Vagrant
-* `$ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb`
-* `$ sudo dpkg -i vagrant_1.6.3_x86_64.deb`
+This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
+the foundation for most of the documentation samples and potentially a good starting point for your application.
 
-# Install Virtualbox
-Virtualbox.com/wiki/Linux_Downloads
-copy command below on web page
-* `$ sudo add-apt-repository -y “deb http://download.virtualbox.com/virtualbox/debian trusty contrib"`
-Verify with fingerprint
-* `$ gpg —with-fingerprint oracle_vbox.asc`
-Go back to Linux_Downloads and copy the key fingerprint is:
-verify key
-* `$ sudo apt-key add oracle_vbox.asc`
-* `$ sudo apt-get -y update`
-* `$ sudo apt-get -y install virtualbox-4.3 dkms`
+It's been extended with testing support so you can start writing tests immediately.
 
-# Test Install
-vagrant -v
-vboxmanage -v
+**This is not the perfect arrangement for your application. It is not designed for production.
+It exists primarily to get you started quickly with learning and prototyping in Angular**
 
-# Run Vagrant
-cd into the living water repo
-* `$ cd ./livingwater`
-* `$ vagrant up --provision`
+We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
+Please keep that in mind before posting issues and PRs.
 
-# Once vagrant is up and provisioned ssh into vagrant
-* `$ vagrant ssh`
-* `$ cd /vagrant/livingwater/`
+## Prerequisites
 
-# Run gulp
-* `$ gulp`
+Node.js and npm are essential to Angular development. 
+    
+<a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
+Get it now</a> if it's not already installed on your machine.
+ 
+**Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
+by running `node -v` and `npm -v` in a terminal/console window.
+Older versions produce errors.
 
-# If you wish to run browser sync open a new terminal tab and make sure you are in the same directory as bs-config.js
-* `$ browser-sync start`
+We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
 
-# Create .bashrc file to automatically load directory on ssh
-* `$ touch .bashrc`
-# `$ nano .bashrc`
-# `cd /vagrant/livingwater/`
-# ctrl x
+## Create a new project based on the QuickStart
 
-# URLs
-# Main IP
-http://192.222.22.22
-
-# Live Reload requires you to run gulp
-http://192.222.22.22:35729
-
-# Browser sync requires you to run browser sync
-http://192.222.22.22:5000
-
-# Deploy Mobile App
-### Dependencies
-* Android Studio
-* Cordova (See installing Cordova)
-* Node 4.x+
-* Xcode 8+
-
-###Installing Cordova
-In order to build the mobile application you will need to install cordova
-globally via npm.
+Clone this repo into new project folder (e.g., `my-proj`).
 ```bash
-$ npm install -g cordova
+git clone  https://github.com/angular/quickstart  my-proj
+cd my-proj
 ```
 
-###Project Setup
-In order to create the platforms directory, use the following command to
-prepare the environment:
+We have no intention of updating the source on `angular/quickstart`.
+Discard everything "git-like" by deleting the `.git` folder.
 ```bash
-$ cordova prepare
-```
-This command will generate the require cordova project files as defined 
-below:
-
-* platforms/ios
-* platforms/android
-* hooks/
-* plugins/
-
-###Building the app
-To prepare you application binaries, use the following command:
-```bash
-cordova build
+rm -rf .git  # non-Windows
+rd .git /S/Q # windows
 ```
 
-this should generate the binaries in the following directories:
-* platforms/ios/build/emulator
-* 
+### Create a new git repo
+You could [start writing code](#start-development) now and throw it all away when you're done.
+If you'd rather preserve your work under source control, consider taking the following steps.
 
+Initialize this project as a *local git repo* and make the first commit:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+Create a *remote repository* for this project on the service of your choice.
+
+Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
+```bash
+git remote add origin <repo-address>
+git push -u origin master
+```
+## Install npm packages
+
+> See npm and nvm version notes above
+
+Install the npm packages described in the `package.json` and verify that it works:
+
+```bash
+npm install
+npm start
+```
+
+The `npm start` command first compiles the application, 
+then simultaneously re-compiles and runs the `lite-server`.
+Both the compiler and the server watch for file changes.
+
+Shut it down manually with `Ctrl-C`.
+
+You're ready to write your application.
+
+### npm scripts
+
+We've captured many of the most useful commands in npm scripts defined in the `package.json`:
+
+* `npm start` - runs the compiler and a server at the same time, both in "watch mode".
+* `npm run tsc` - runs the TypeScript compiler once.
+* `npm run tsc:w` - runs the TypeScript compiler in watch mode; the process keeps running, awaiting changes to TypeScript files and re-compiling when it sees them.
+* `npm run lite` - runs the [lite-server](https://www.npmjs.com/package/lite-server), a light-weight, static file server, written and maintained by
+[John Papa](https://github.com/johnpapa) and
+[Christopher Martin](https://github.com/cgmartin)
+with excellent support for Angular apps that use routing.
+
+Here are the test related scripts:
+* `npm test` - compiles, runs and watches the karma unit tests
+* `npm run e2e` - run protractor e2e tests, written in JavaScript (*e2e-spec.js)
+
+## Testing
+
+The QuickStart documentation doesn't discuss testing.
+This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
+
+These tools are configured for specific conventions described below.
+
+*It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.
+We recommend that you shut down one before starting another.*
+
+### Unit Tests
+TypeScript unit-tests are usually in the `app` folder. Their filenames must end in `.spec`.
+
+Look for the example `app/app.component.spec.ts`.
+Add more `.spec.ts` files as you wish; we configured karma to find them.
+
+Run it with `npm test`
+
+That command first compiles the application, then simultaneously re-compiles and runs the karma test-runner.
+Both the compiler and the karma watch for (different) file changes.
+
+Shut it down manually with `Ctrl-C`.
+
+Test-runner output appears in the terminal window.
+We can update our app and our tests in real-time, keeping a weather eye on the console for broken tests.
+Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (`Ctrl-C`) and
+restart it. No worries; it's pretty quick.
+
+### End-to-end (E2E) Tests
+
+E2E tests are in the `e2e` directory, side by side with the `app` folder.
+Their filenames must end in `.e2e-spec.ts`.
+
+Look for the example `e2e/app.e2e-spec.ts`.
+Add more `.e2e-spec.js` files as you wish (although one usually suffices for small projects);
+we configured protractor to find them.
+
+Thereafter, run them with `npm run e2e`.
+
+That command first compiles, then simultaneously starts the Http-Server at `localhost:8080`
+and launches protractor.  
+
+The pass/fail test results appear at the bottom of the terminal window.
+A custom reporter (see `protractor.config.js`) generates a  `./_test-output/protractor-results.txt` file
+which is easier to read; this file is excluded from source control.
+
+Shut it down manually with `Ctrl-C`.
+
+[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
+[travis-badge-url]: https://travis-ci.org/angular/quickstart
