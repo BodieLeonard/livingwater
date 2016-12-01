@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'dwelling.component.html'
 })
 export class DwellingComponent implements OnInit {
+
+    childTxtHeadline = 'Start by selecting your <strong>housing</strong>';
     constructor() { }
 
     ngOnInit() { }

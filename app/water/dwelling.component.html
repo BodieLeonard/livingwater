@@ -1,9 +1,19 @@
-<section>
-<app-heading></app-heading>
-<instruction></instruction>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+<navigation></navigation>
 
-<div class="water-option house">House</div>
-<div class="water-option apartment">Apartment</div>
+
+<section class="content-wrap">
+<app-heading></app-heading>
+<instruction [txtHeadline]='childTxtHeadline'></instruction>
+<div class="water-options">
+<a class="water-option house">
+  <label>House</label>
+</a>
+<a class="water-option apartment">
+  <label>Apartment</label>
+</a>
+</div>
 <gauge></gauge>
 <navigation-secondary></navigation-secondary>
 </section>
