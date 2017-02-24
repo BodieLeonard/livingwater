@@ -118,6 +118,17 @@ button:disabled {
   display: block;
   position: absolute;
   bottom: 140px;
+  padding:10px 60px;
+  right:0px;
+}
+.button.btn-cancel {
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  bottom: 140px;
+  left:0px;
+  border:none;
+  text-decoration: underline;
 }
 
 /* Navigation link styles */
@@ -132,6 +143,11 @@ nav a {
 nav a:visited, a:link {
   color: #607D8B;
 }
+
+a.button:link, a.button:focus, a.button:active {
+  color: #ffffff;
+}
+
 nav a:hover {
   color: #039be5;
 }
@@ -218,16 +234,22 @@ nav a.router-link-active {
 }
 
 .loading{
-  font-size: 350%;
+  padding: 10px;
+  font-size: 150%;
   text-transform: uppercase;
   letter-spacing: -.05em;
   line-height: .9em;
-  width:360px;
+  width: 50%;
   text-align: center;
-  margin:0 auto;
-  margin-top:100px;
-  color:black;
-  font-weight:300;
+  margin: 0 auto;
+  margin-top: 100px;
+  color: black;
+  font-weight: 300;
+  z-index: 3;
+  position: relative;
+  border: 1px solid #ddd;
+  background: rgba(0,0,0,.05);
+  font-weight: 100;
 }
 
 .button, a.button:visited {
@@ -304,7 +326,7 @@ section{
 
 
 
-navigation {
+nav {
   width: 200px;
   height: 100%;
   position: fixed;
@@ -319,7 +341,7 @@ navigation {
   font-weight: 100;
 }
 
-navigation ul, navigation ul li{
+nav ul, nav ul li{
   padding:0;
   margin:0;
 }
@@ -334,7 +356,7 @@ navigation ul, navigation ul li{
   border-radius: 0;
 }
 .nav-item a.external{
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#FEC31D' width='24' height='24' viewBox='0 0 24 24'><path d='M16 9v-4l8 7-8 7v-4h-8v-6h8zm-16-7v20h14v-2h-12v-16h12v-2h-14z'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#43a9de' width='24' height='24' viewBox='0 0 24 24'><path d='M16 9v-4l8 7-8 7v-4h-8v-6h8zm-16-7v20h14v-2h-12v-16h12v-2h-14z'/></svg>");
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: center right 16px;
@@ -350,7 +372,7 @@ navigation ul, navigation ul li{
   bottom: 100%;
   left: 0;
   z-index: 1;
-  transition: left .3s;
+  transition: left .1s ease-out;
 }
 
 .nav-trigger {
@@ -372,24 +394,24 @@ label[for="nav-trigger"] {
 
 /* Make the Magic Happen */
 .nav-trigger + label, .content-wrap {
-  transition: left .3s;
+  transition: left .1s ease-out;
   transition-timing-function: ease-out;
 
 }
 .nav-trigger:checked + label {
   left: 165px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' width='24' height='24' viewBox='0 0 24 24'><path d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z'/></svg>");
-  transition: left .3s;
+  transition: left .1s ease-out;
   transition-timing-function: ease-out;
 }
-.nav-trigger:checked ~ .content-wrap {
+.nav-trigger:checked  .content-wrap {
   left: 200px;
   transition-timing-function: ease-out;
 }
-.nav-trigger:checked ~ navigation {
+.nav-trigger:checked ~ nav {
   left: 0px;
   z-index: 2;
-  transition: left .3s;
+  transition: left .1s ease-out;
   transition-timing-function: ease-out;
 }
 

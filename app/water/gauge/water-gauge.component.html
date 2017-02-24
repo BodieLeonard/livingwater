@@ -1,6 +1,15 @@
 <section>
   <app-heading></app-heading>
   <instruction ></instruction>
+
+  <button class="btn" (click)="onAdd()">more</button>
+  <div class="counter">
+    {{counter}}
+  </div>
+  <button class="btn" (click)="onRemove()">less</button>
+
+
   <gauge></gauge>
-  <a class="button btn btn-secondary">Save</a>
+  <a class="button btn btn-secondary" (click)="onCalculate()">Save</a>
+  <a class="button btn btn-cancel" (click)="onCancel()">Cancel</a>
 </section>

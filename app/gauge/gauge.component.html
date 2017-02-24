@@ -1,8 +1,9 @@
 <div class="gauge">
   <i class="fa fa-tint" aria-hidden="true"></i>
+
   <h1>Water Gauge</h1>
-  <div class="right">
-    <p class="count">0</p>
+  <div class="right totals" (click)="onTotal()">
+    <p class="count">{{total}}</p>
     <p class="measurement">gal</p>
   </div>
 </div>

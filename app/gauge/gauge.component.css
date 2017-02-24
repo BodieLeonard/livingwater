@@ -45,3 +45,7 @@ p{
   font-size: 140%;
 }
 
+.totals {
+  cursor: pointer;
+}
+

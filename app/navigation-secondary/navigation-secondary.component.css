@@ -51,6 +51,10 @@ label i{
 .third {
   color:#D70005;
 }
+
+.fourth {
+  color:#ff00ff;
+}
 .count{
   font-size:300%;
   position: relative;

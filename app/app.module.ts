@@ -12,6 +12,7 @@ import { IntroFiveComponent } from './intro/intro-five.component';
 import { DwellingComponent } from './water/dwelling.component';
 import { BathingComponent } from './water/bathing.component';
 import { DishwasherComponent } from './water/dishwasher.component';
+import { LaundryComponent } from './water/laundry.component';
 import { LandingComponent } from './landing/landing.component';
 import { WaterComponent } from './water/water.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -28,6 +29,8 @@ import { PaymentComponent } from './donation/payment.component';
 import { PhoneComponent } from './donation/phone.component';
 import { ThankyouComponent } from './donation/thankyou.component';
 import { WaterGaugeComponent } from './water/gauge/water-gauge.component';
+import { TotalComponent } from './water/total.component';
+import { CalculatorService } from './calculator/calculator.service';
 
 @NgModule({
   imports:      [
@@ -49,10 +52,17 @@ import { WaterGaugeComponent } from './water/gauge/water-gauge.component';
           { path: 'water', component: WaterComponent,
               children:[
                   { path: '', redirectTo: 'dwelling' },
-                  { path: 'dwelling', component: DwellingComponent },
+                  { path: 'dwelling', component: DwellingComponent},
+                  { path: 'dwelling/house/gauge', component: WaterGaugeComponent },
+                  { path: 'dwelling/apartment/gauge', component: WaterGaugeComponent },
                   { path: 'bathing', component: BathingComponent },
+                  { path: 'bathing/shower/gauge', component: WaterGaugeComponent },
+                  { path: 'bathing/bath/gauge', component: WaterGaugeComponent },
                   { path: 'dishwasher', component: DishwasherComponent },
-                  { path: 'gauge', component: WaterGaugeComponent }
+                  { path: 'dishwasher/gauge', component: WaterGaugeComponent },
+                  { path: 'laundry', component: LaundryComponent },
+                  { path: 'laundry/gauge', component: WaterGaugeComponent },
+                  { path: 'total', component: TotalComponent },
               ]
           },
           { path: 'donation', component: DonationComponent,
@@ -83,6 +93,7 @@ import { WaterGaugeComponent } from './water/gauge/water-gauge.component';
       DwellingComponent,
       BathingComponent,
       DishwasherComponent,
+      LaundryComponent,
       WaterComponent,
       NavigationComponent,
       NavigationSecondaryComponent,
@@ -98,8 +109,10 @@ import { WaterGaugeComponent } from './water/gauge/water-gauge.component';
       PaymentComponent,
       PhoneComponent,
       ThankyouComponent,
-      WaterGaugeComponent
+      WaterGaugeComponent,
+      TotalComponent
   ],
+    providers:[CalculatorService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

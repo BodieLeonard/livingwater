@@ -1,23 +1,31 @@
-<div class="navigation-secondary first">
+<a [routerLink]="['/water/dwelling']" class="navigation-secondary first">
   <div class="circle-graph">
-    <div class="count">0</div>
+    <div class="count">{{dwellingTotal}}</div>
+    <div class="measurement">GAL</div>
+  </div>
+  <label><i class="fa fa-tint" aria-hidden="true"></i>Dwelling</label>
+</a>
+
+<a [routerLink]="['/water/bathing']" class="navigation-secondary second">
+  <div class="circle-graph">
+    <div class="count">{{bathTotal}}</div>
     <div class="measurement">GAL</div>
   </div>
   <label><i class="fa fa-tint" aria-hidden="true"></i>Bath</label>
-</div>
+</a>
 
-<div class="navigation-secondary second">
+<a [routerLink]="['/water/dishwasher']" class="navigation-secondary third">
   <div class="circle-graph">
-    <div class="count">0</div>
+    <div class="count">{{dishwasherTotal}}</div>
     <div class="measurement">GAL</div>
   </div>
   <label><i class="fa fa-tint" aria-hidden="true"></i>Dishwasher</label>
-</div>
+</a>
 
-<div class="navigation-secondary third">
+<a [routerLink]="['/water/laundry']" class="navigation-secondary fourth">
   <div class="circle-graph">
-    <div class="count">0</div>
+    <div class="count">{{laundryTotal}}</div>
     <div class="measurement">GAL</div>
   </div>
   <label><i class="fa fa-tint" aria-hidden="true"></i>Laundry</label>
-</div>
+</a>
